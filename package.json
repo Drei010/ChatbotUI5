@@ -1,0 +1,34 @@
+{
+  "name": "Chatbot-Ui5",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^3.0.2",
+    "@cap-js/postgres": "^3.0.1",
+    "@sap/cds": "^10.0.6",
+    "@sap/cds-dk": "^10.0.7",
+    "@sap/xssec": "^4.15.0",
+    "playwright-cli": "^0.262.0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^3.0.2",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "cds-plugin-ui5": "^0.17.4"
+  },
+  "scripts": {
+    "start": "cds watch",
+    "watch-chatbotfrontend": "cds watch --open chatbotfrontend/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "test:e2e": "playwright test"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "dummy"
+      }
+    }
+  }
+}

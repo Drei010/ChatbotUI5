@@ -1,0 +1,35 @@
+# Comments are provided throughout this file to help you get started.
+
+services:
+  server:
+    build:
+      context: .
+      target: final
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://cap_user:cap_pass@db:5432/cap_db
+    ports:
+      - 4004:4004
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: cap_user
+      POSTGRES_PASSWORD: cap_pass
+      POSTGRES_DB: cap_db
+    ports:
+      - 5432:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "cap_user", "-d", "cap_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db-data:

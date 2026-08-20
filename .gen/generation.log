@@ -1,0 +1,30 @@
+Starting CAP Project Generator...
+Using @sap/cds-dk [9.9.2] from /Users/andreikylehidalgo/.nvm/versions/node/v24.15.0/lib/node_modules/@sap/cds-dk
+Using @sap/generator-cap-project [2.0.6] from [/Users/andreikylehidalgo/.nvm/versions/node/v24.15.0/lib/node_modules/@sap/generator-cap-project]
+Using root path [/Users/andreikylehidalgo/Documents/Coding/UI5-ChatbotApp]
+Prompting
+writing
+
+Creating project with approuter, nodejs
+
+Adding facet: nodejs
+Adding facet: approuter
+
+Successfully initialized CAP project
+Continue with: code Chatbot-Ui5 
+
+
+Installing dependencies...
+
+added 109 packages, and audited 110 packages in 6s
+
+35 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Finished installing dependencies
+
+Done setting up project Chatbot-Ui5
+Project is ready to use
+

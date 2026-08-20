@@ -1,0 +1,13 @@
+<mvc:View controllerName="chatbotfrontend.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List id="messageList" items="{/AIMessage}">
+                <StandardListItem title="{question}" />
+            </List>
+            <Input id="messageInput" placeholder="Type your message..." />
+            <Button text="Send" press="onSendMessage" />
+        </content>
+    </Page>
+</mvc:View>
