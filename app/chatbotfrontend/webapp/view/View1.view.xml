@@ -8,6 +8,12 @@
             </List>
             <Input id="messageInput" placeholder="Type your message..." />
             <Button text="Send" press="onSendMessage" />
+            <IconTabBar id="tabBar" select="onTabSelect" expandable="false">
+                <items>
+                    <IconTabFilter id="inboxTab" key="inbox" text="Inbox" />
+                    <IconTabFilter id="sentTab" key="sent" text="Sent" />
+                </items>
+            </IconTabBar>
         </content>
     </Page>
 </mvc:View>

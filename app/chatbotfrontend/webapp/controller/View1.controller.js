@@ -5,6 +5,20 @@ sap.ui.define([
 
     return Controller.extend("chatbotfrontend.controller.View1", {
         onInit() {
+            this.getOwnerComponent().getRouter().attachRouteMatched(this.onRouteMatched, this);
+        },
+        onExit() {
+            this.getOwnerComponent().getRouter().detachRouteMatched(this.onRouteMatched, this);
+        },
+        onTabSelect(oEvent) {
+            this.getOwnerComponent().getRouter().navTo(
+                oEvent.getParameter("key") === "sent" ? "RouteSent" : "RouteInbox"
+            );
+        },
+        onRouteMatched(oEvent) {
+            const sRoute = oEvent.getParameter("name");
+            const sKey = sRoute === "RouteSent" ? "sent" : "inbox";
+            this.byId("tabBar").setSelectedKey(sKey);
         },
         onSendMessage: function(oEvent) {
             const oInput = this.byId("messageInput");

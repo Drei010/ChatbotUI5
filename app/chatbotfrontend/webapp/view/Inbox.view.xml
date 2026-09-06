@@ -1,0 +1,7 @@
+<mvc:View controllerName="chatbotfrontend.controller.Inbox"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <VBox>
+        <Text text="Inbox messages" />
+    </VBox>
+</mvc:View>

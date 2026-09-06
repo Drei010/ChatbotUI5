@@ -96,7 +96,24 @@
           "name": "RouteView1",
           "pattern": ":?query:",
           "target": [
-            "TargetView1"
+            "TargetView1",
+            "TargetInbox"
+          ]
+        },
+        {
+          "name": "RouteInbox",
+          "pattern": "inbox:?query:",
+          "target": [
+            "TargetView1",
+            "TargetInbox"
+          ]
+        },
+        {
+          "name": "RouteSent",
+          "pattern": "sent:?query:",
+          "target": [
+            "TargetView1",
+            "TargetSent"
           ]
         }
       ],
@@ -104,6 +121,22 @@
         "TargetView1": {
           "id": "View1",
           "name": "View1"
+        },
+        "TargetInbox": {
+          "id": "Inbox",
+          "name": "Inbox",
+          "parent": "TargetView1",
+          "controlId": "inboxTab",
+          "controlAggregation": "content",
+          "clearControlAggregation": true
+        },
+        "TargetSent": {
+          "id": "Sent",
+          "name": "Sent",
+          "parent": "TargetView1",
+          "controlId": "sentTab",
+          "controlAggregation": "content",
+          "clearControlAggregation": true
         }
       }
     },
