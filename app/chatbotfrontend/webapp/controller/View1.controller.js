@@ -11,13 +11,11 @@ sap.ui.define([
             this.getOwnerComponent().getRouter().detachRouteMatched(this.onRouteMatched, this);
         },
         onTabSelect(oEvent) {
-            this.getOwnerComponent().getRouter().navTo(
-                oEvent.getParameter("key") === "sent" ? "RouteSent" : "RouteInbox"
-            );
+            this.getOwnerComponent().getRouter().navTo(oEvent.getParameter("key"));
         },
         onRouteMatched(oEvent) {
             const sRoute = oEvent.getParameter("name");
-            const sKey = sRoute === "RouteSent" ? "sent" : "inbox";
+            const sKey = ["sent", "spam", "scheduled"].includes(sRoute) ? sRoute : "inbox";
             this.byId("tabBar").setSelectedKey(sKey);
         },
         onSendMessage: function(oEvent) {

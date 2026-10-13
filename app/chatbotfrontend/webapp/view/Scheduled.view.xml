@@ -1,0 +1,7 @@
+<mvc:View controllerName="chatbotfrontend.controller.Scheduled"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <VBox>
+        <Text text="Scheduled messages" />
+    </VBox>
+</mvc:View>

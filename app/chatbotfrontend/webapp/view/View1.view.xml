@@ -12,6 +12,8 @@
                 <items>
                     <IconTabFilter id="inboxTab" key="inbox" text="Inbox" />
                     <IconTabFilter id="sentTab" key="sent" text="Sent" />
+                    <IconTabFilter id="spamTab" key="spam" text="Spam" />
+                    <IconTabFilter id="scheduledTab" key="scheduled" text="Scheduled" />
                 </items>
             </IconTabBar>
         </content>

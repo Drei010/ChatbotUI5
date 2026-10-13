@@ -1,0 +1,7 @@
+<mvc:View controllerName="chatbotfrontend.controller.Spam"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <VBox>
+        <Text text="Spam messages" />
+    </VBox>
+</mvc:View>

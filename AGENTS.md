@@ -1,8 +1,9 @@
-# Agent Directives
+Agent Directives
 
 ## Code Generation and Modification
 
 When generating, writing, or modifying any code in this project:
+
 1. Use the Ponytail skill for all code-related tasks
 2. Apply the Ponytail skill's guidelines for code structure, style, and best practices
 3. Reference the Ponytail skill documentation for language-specific conventions
@@ -20,32 +21,37 @@ When generating, writing, or modifying any code in this project:
 ## Playwright CLI Setup
 
 ### Prerequisites
+
 Confirm the following are installed:
+
 - Node.js (v14 or higher)
 - npm or yarn package manager
 
 ### Installation Steps
 
 1. **Install Playwright:**
+
    ```bash
    npm install -D @playwright/test
    ```
-
 2. **Initialize Playwright configuration:**
+
    ```bash
    npx playwright install
    ```
-
 3. **Create playwright.config.ts (or .js) if it doesn't exist:**
+
    - Location: Project root directory
    - Purpose: Configure test execution, browsers, and output directories
    - Reference: [Playwright Config Documentation](https://playwright.dev/docs/test-configuration)
-
 4. **Set up screenshots directory:**
+
    - Configure screenshot output in `playwright.config.ts`.
 
 ### Verification
+
 Run this command to confirm setup:
+
 ```bash
 npx playwright --version
 ```
@@ -58,6 +64,7 @@ npx playwright --version
 - View test reports: `npx playwright show-report`
 
 Screenshots can be captured in tests with:
+
 ```javascript
 await page.screenshot({ path: 'screenshots/my-feature.png' });
 ```
@@ -65,6 +72,7 @@ await page.screenshot({ path: 'screenshots/my-feature.png' });
 ## Document All Changes
 
 When modifying this AGENTS.md file:
+
 1. Keep the structure above intact
 2. Add new directives in a new section (e.g., Section 6, 7, etc.)
 3. Maintain clarity and specificity in all instructions
